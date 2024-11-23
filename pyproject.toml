@@ -7,7 +7,7 @@ packages = ["iridis"]
 
 [project]
 name = "iridis"
-version = "0.2.1"
+version = "0.2.3"
 requires-python = ">=3.8"
 authors = [
   {name = "Tobias Filgas", email = "tobiasfilgas@gmail.com"},
@@ -15,6 +15,6 @@ authors = [
 maintainers = [
   {name = "Tobias Filgas", email = "tobiasfilgas@gmail.com"},
 ]
-description = "library for a colorful terminal!"
+description = "Useful methods for working in the terminal!"
 readme = "README.md"
 license = {file = "LICENSE"}

@@ -27,7 +27,7 @@ Prints the given values in the specified color.
 - **values**: Objects to print.
 - **color**: `Color` enum specifying the text color.
 
-**Example:**
+#### Example
 
 ```python
 print_with_color("Hello, World!", color=Color.BLUE)
@@ -41,7 +41,7 @@ Prints the values in red to indicate an error.
 
 - **values**: Objects representing the error message.
 
-**Example:**
+#### Example
 
 ```python
 print_error("This is an error message.")
@@ -55,7 +55,7 @@ Prints the values in green to indicate a title or header.
 
 - **values**: Objects representing the title text.
 
-**Example:**
+#### Example
 
 ```python
 print_title("Welcome to the Application")
@@ -69,7 +69,7 @@ Prints the values with a rainbow color effect.
 
 - **values**: Objects to print with each character in a different color.
 
-**Example:**
+#### Example
 
 ```python
 print_rainbow("This text is in rainbow colors!")
@@ -85,8 +85,38 @@ Prompts the user for a number and validates it against optional conditions.
 - **error_message**: Error message shown if input is invalid (default: "Špatný vstup, zkuste znova!").
 - **conditions**: List of boolean lambda conditions to validate the input.
 
-**Example:**
+#### Example
 
 ```python
 get_number_from_user("Enter a number: ", "Invalid input!", conditions=[lambda x: x > 0])
 ```
+
+### `get_string_from_user(input_text: str, error_message: str, conditions: list) -> str`
+
+Prompts the user to input a string and validates it against specified conditions.
+
+- **input_text**: Prompt text for the user.
+- **error_message**: Error message shown if input is invalid (default: "Špatný vstup, zkuste znova!").
+- **conditions**: A list of callable conditions that take a string and return a boolean.
+
+#### Example
+
+```python
+get_string_from_user(
+    "Enter your name: ",
+    "Invalid name!",
+    conditions=[is_not_empty, is_alpha_only]
+)
+```
+
+#### String Validation Functions
+
+These utility functions validate string inputs:
+
+- **`is_not_empty(string: str) -> bool`**: Checks if the string is not empty.
+- **`is_alpha_only(string: str) -> bool`**: Ensures the string contains only alphabetic characters.
+- **`has_digits(string: str) -> bool`**: Returns `True` if the string contains any digits.
+- **`has_no_digits(string: str) -> bool`**: Ensures the string has no digits.
+- **`has_special_characters(string: str) -> bool`**: Checks if the string contains any special characters.
+- **`has_no_special_characters(string: str) -> bool`**: Ensures the string has no special characters.
+- **`is_valid_utf8(string: str) -> bool`**: Checks if the string contains only valid UTF-8 characters.
