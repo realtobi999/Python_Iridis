@@ -1,6 +1,6 @@
 # Iridis
 
-This library provides functions to print styled text in the console, with support for color-coded messages and rainbow text effects.
+This is my personal library that provides a way for me to share and reuse code that i commonly use. That is for colorful printing to console, user input validation and benchmarking for example.
 
 ## Color Enum
 
@@ -91,6 +91,8 @@ Prompts the user for a number and validates it against optional conditions.
 get_number_from_user("Enter a number: ", "Invalid input!", conditions=[lambda x: x > 0])
 ```
 
+---
+
 ### `get_string_from_user(input_text: str, error_message: str, conditions: list) -> str`
 
 Prompts the user to input a string and validates it against specified conditions.
@@ -120,3 +122,21 @@ These utility functions validate string inputs:
 - **`has_special_characters(string: str) -> bool`**: Checks if the string contains any special characters.
 - **`has_no_special_characters(string: str) -> bool`**: Ensures the string has no special characters.
 - **`is_valid_utf8(string: str) -> bool`**: Checks if the string contains only valid UTF-8 characters.
+
+## Other
+
+### `@benchmark`
+
+Is a decorator that will upon calling the decorated function return an additional value of how long the decorated function took time to execute.
+
+#### Example
+
+```python
+@benchmark
+def add(a, b):
+    return a + b
+
+
+result, execution_time = add(5, 3)
+print(f"Result: {result}, Execution time: {execution_time:.6f} seconds")
+```

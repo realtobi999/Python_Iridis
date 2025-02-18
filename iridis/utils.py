@@ -84,6 +84,7 @@ def has_special_characters(string: str) -> bool:
 def has_no_special_characters(string: str) -> bool:
     return not has_special_characters(string)
 
+
 def is_valid_utf8(string: str) -> bool:
     try:
         string.encode("utf-8")

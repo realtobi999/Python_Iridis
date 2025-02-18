@@ -1,5 +1,6 @@
 from .color import Color
 
+
 def print_with_color(*values: object, color: Color) -> None:
     """
     Prints the given values in a specified color.

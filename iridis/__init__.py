@@ -15,6 +15,7 @@ from .utils import (
     is_alpha_only,
     is_not_empty,
 )
+from .benchmark import benchmark
 
 # Define the public API
 __all__ = [
@@ -31,4 +32,5 @@ __all__ = [
     "has_no_digits",
     "is_alpha_only",
     "is_not_empty",
+    "benchmark",
 ]

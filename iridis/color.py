@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class Color(Enum):
     # Standard colors
     BLACK = "\033[30m"
@@ -42,4 +43,3 @@ class Color(Enum):
     BG_BRIGHT_WHITE = "\033[107m"
 
     RESET = "\033[0m"
-
